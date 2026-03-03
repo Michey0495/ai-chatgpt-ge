@@ -81,31 +81,56 @@ export default function Home() {
           <p className="mb-4 text-sm font-medium tracking-widest text-cyan-400 uppercase">
             Generative Engine Optimization
           </p>
-          <h1 className="text-5xl font-bold leading-tight tracking-tight text-white">
-            AI検索エンジンでの
+          <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
+            ChatGPTに聞かれたとき、
             <br />
-            ブランド可視性を監視
+            あなたのブランドは
+            <br />
+            紹介されていますか？
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-white/60">
-            ChatGPT、Gemini、Perplexity、Claude。
+            検索の主戦場はGoogleからAIに移っている。
             <br />
-            4大AI検索エンジンがあなたのブランドをどう回答しているか、
+            ChatGPT・Gemini・Perplexity・Claude——
             <br />
-            スコア化して追跡する日本語対応GEOモニタリングツール。
+            4大AI検索エンジンでのブランド言及を0-100でスコア化して追跡。
           </p>
           <div className="mt-10 flex items-center justify-center gap-4">
             <Link
               href="/register"
-              className="cursor-pointer rounded-lg bg-cyan-400 px-8 py-3 text-base font-medium text-black transition-all duration-200 hover:bg-cyan-300"
+              className="cursor-pointer rounded-lg bg-cyan-400 px-8 py-3.5 text-base font-semibold text-black transition-all duration-200 hover:bg-cyan-300"
             >
-              無料で始める
+              無料でスコアを確認する
             </Link>
             <Link
               href="/dashboard"
-              className="cursor-pointer rounded-lg border border-white/10 px-8 py-3 text-base font-medium text-white transition-all duration-200 hover:border-white/20 hover:bg-white/5"
+              className="cursor-pointer rounded-lg border border-white/10 px-8 py-3.5 text-base font-medium text-white transition-all duration-200 hover:border-white/20 hover:bg-white/5"
             >
               デモを見る
             </Link>
+          </div>
+          <p className="mt-4 text-sm text-white/30">
+            クレジットカード不要 - 1分で開始
+          </p>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="mx-auto max-w-7xl px-6 pb-12">
+        <div className="flex items-center justify-center gap-12 text-center">
+          <div>
+            <p className="text-2xl font-bold text-white">4</p>
+            <p className="text-sm text-white/40">AI検索エンジン対応</p>
+          </div>
+          <div className="h-8 w-px bg-white/10" />
+          <div>
+            <p className="text-2xl font-bold text-white">0-100</p>
+            <p className="text-sm text-white/40">可視性スコアリング</p>
+          </div>
+          <div className="h-8 w-px bg-white/10" />
+          <div>
+            <p className="text-2xl font-bold text-white">MCP/A2A</p>
+            <p className="text-sm text-white/40">AI連携対応</p>
           </div>
         </div>
       </section>
@@ -240,19 +265,24 @@ export default function Home() {
       <section className="border-t border-white/5 py-24">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="text-3xl font-bold text-white">
-            AI検索エンジン時代の
+            あなたのブランド、
             <br />
-            ブランド戦略を始めよう
+            AIにどう紹介されているか知っていますか？
           </h2>
-          <p className="mt-4 text-white/50">
-            従来のSEOだけでは不十分。GEO対策で次の時代に備える。
+          <p className="mt-4 text-lg text-white/50">
+            SEO対策に投資しているなら、GEO対策にも投資すべき時代。
+            <br />
+            まずは無料で、自社ブランドのAI可視性スコアを確認しよう。
           </p>
           <Link
             href="/register"
-            className="mt-8 inline-block cursor-pointer rounded-lg bg-cyan-400 px-8 py-3 text-base font-medium text-black transition-all duration-200 hover:bg-cyan-300"
+            className="mt-8 inline-block cursor-pointer rounded-lg bg-cyan-400 px-10 py-4 text-base font-semibold text-black transition-all duration-200 hover:bg-cyan-300"
           >
-            無料アカウントを作成
+            無料でスコアを確認する
           </Link>
+          <p className="mt-3 text-sm text-white/30">
+            1ブランド・5キーワードまで永久無料
+          </p>
         </div>
       </section>
 

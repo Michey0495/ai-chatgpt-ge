@@ -16,23 +16,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GEO Radar - AI検索エンジン可視性モニタリング",
+  title: {
+    default: "GEO Radar - AI検索エンジンでのブランド可視性を監視・スコア化",
+    template: "%s | GEO Radar",
+  },
   description:
-    "ChatGPT、Gemini、Perplexity、ClaudeでのブランドAI検索可視性を監視・分析。日本語完全対応のGEOモニタリングツール。",
+    "ChatGPT・Gemini・Perplexity・Claudeがあなたのブランドをどう紹介しているかを0-100でスコア化。AI検索の可視性を測定・追跡する日本初のGEOモニタリングツール。無料プランあり。",
   keywords: [
-    "AI検索 対策",
     "GEO対策",
+    "AI検索対策",
     "ChatGPT SEO",
-    "AI検索エンジン 最適化",
     "Generative Engine Optimization",
-    "ブランド可視性",
+    "AI検索エンジン最適化",
+    "ブランド可視性モニタリング",
     "AI検索モニタリング",
+    "GEOモニタリング",
+    "ChatGPT ブランド",
+    "Gemini SEO",
+    "Perplexity 対策",
+    "Claude 検索",
+    "AI マーケティング",
+    "GEO Radar",
+    "AI visibility monitoring",
+    "generative search optimization",
   ],
   metadataBase: new URL("https://geo-radar.ezoai.jp"),
   openGraph: {
-    title: "GEO Radar - AI検索エンジン可視性モニタリング",
+    title: "GEO Radar - AI検索でのブランド可視性をスコア化",
     description:
-      "ChatGPT、Gemini、Perplexity、ClaudeでのブランドAI検索可視性を監視・分析。",
+      "ChatGPT・Gemini・Perplexity・Claudeでの自社ブランドの言及・引用状況を0-100でスコア化して追跡。日本初のGEOモニタリングツール。",
     url: "https://geo-radar.ezoai.jp",
     siteName: "GEO Radar",
     locale: "ja_JP",
@@ -40,17 +52,25 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GEO Radar - AI検索エンジン可視性モニタリング",
+    title: "GEO Radar - AI検索でのブランド可視性をスコア化",
     description:
-      "ChatGPT、Gemini、Perplexity、ClaudeでのブランドAI検索可視性を監視・分析。",
+      "ChatGPT・Gemini・Perplexity・Claudeでのブランド言及をスコア化して追跡。日本初のGEOモニタリングツール。無料プランあり。",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: "https://geo-radar.ezoai.jp",
   },
+  category: "technology",
 };
 
 export default function RootLayout({
