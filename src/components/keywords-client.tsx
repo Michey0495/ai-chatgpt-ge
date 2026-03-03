@@ -85,8 +85,9 @@ export function KeywordsClient({ initialKeywords }: KeywordsClientProps) {
           <h3 className="mb-4 text-lg font-semibold text-white">新しいキーワードを追加</h3>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
             <div className="flex-1">
-              <label className="mb-1 block text-sm text-white/50">キーワード</label>
+              <label htmlFor="add-keyword" className="mb-1 block text-sm text-white/50">キーワード</label>
               <input
+                id="add-keyword"
                 type="text"
                 value={newKeyword}
                 onChange={(e) => setNewKeyword(e.target.value)}
@@ -96,8 +97,9 @@ export function KeywordsClient({ initialKeywords }: KeywordsClientProps) {
               />
             </div>
             <div className="sm:w-48">
-              <label className="mb-1 block text-sm text-white/50">ブランド名</label>
+              <label htmlFor="add-brand" className="mb-1 block text-sm text-white/50">ブランド名</label>
               <input
+                id="add-brand"
                 type="text"
                 value={newBrand}
                 onChange={(e) => setNewBrand(e.target.value)}

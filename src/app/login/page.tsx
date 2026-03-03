@@ -15,23 +15,27 @@ export default function LoginPage() {
           <p className="mt-2 text-sm text-white/50">
             GEO Radar にログインして、AI検索の可視性を確認しましょう
           </p>
-          <form className="mt-8 space-y-4">
+          <form className="mt-8 space-y-4" action="#">
             <div>
-              <label className="mb-1 block text-sm text-white/70">
+              <label htmlFor="login-email" className="mb-1 block text-sm text-white/70">
                 メールアドレス
               </label>
               <input
+                id="login-email"
                 type="email"
+                autoComplete="email"
                 className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 transition-all duration-200 focus:border-cyan-400/50 focus:outline-none"
                 placeholder="email@example.com"
               />
             </div>
             <div>
-              <label className="mb-1 block text-sm text-white/70">
+              <label htmlFor="login-password" className="mb-1 block text-sm text-white/70">
                 パスワード
               </label>
               <input
+                id="login-password"
                 type="password"
+                autoComplete="current-password"
                 className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 transition-all duration-200 focus:border-cyan-400/50 focus:outline-none"
                 placeholder="••••••••"
               />

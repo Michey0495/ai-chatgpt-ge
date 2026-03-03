@@ -39,12 +39,13 @@ export function FeedbackWidget({ repoName }: { repoName: string }) {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 w-80 rounded-xl border border-white/10 bg-black/95 p-4 shadow-2xl backdrop-blur-sm">
+    <div role="dialog" aria-label="フィードバック" className="fixed bottom-4 right-4 z-50 w-80 rounded-xl border border-white/10 bg-black/95 p-4 shadow-2xl backdrop-blur-sm">
       <div className="mb-3 flex items-center justify-between">
         <h3 className="font-bold text-white">フィードバック</h3>
         <button
           onClick={() => setOpen(false)}
-          className="cursor-pointer text-white/40 transition-all duration-200 hover:text-white/60"
+          aria-label="閉じる"
+          className="cursor-pointer text-xl leading-none text-white/40 transition-all duration-200 hover:text-white/60"
         >
           &times;
         </button>

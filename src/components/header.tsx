@@ -7,16 +7,16 @@ export function Header() {
         <Link href="/" className="text-xl font-bold tracking-tight text-white">
           GEO<span className="text-cyan-400"> Radar</span>
         </Link>
-        <nav className="flex items-center gap-6">
+        <nav className="flex items-center gap-3 sm:gap-6">
           <Link
             href="/dashboard"
-            className="text-sm text-white/70 transition-all duration-200 hover:text-white"
+            className="hidden text-sm text-white/70 transition-all duration-200 hover:text-white sm:block"
           >
             ダッシュボード
           </Link>
           <Link
             href="/login"
-            className="text-sm text-white/70 transition-all duration-200 hover:text-white"
+            className="hidden text-sm text-white/70 transition-all duration-200 hover:text-white sm:block"
           >
             ログイン
           </Link>

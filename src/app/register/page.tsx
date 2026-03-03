@@ -15,33 +15,39 @@ export default function RegisterPage() {
           <p className="mt-2 text-sm text-white/50">
             まずは無料プランで、AI検索でのブランド可視性を確認
           </p>
-          <form className="mt-8 space-y-4">
+          <form className="mt-8 space-y-4" action="#">
             <div>
-              <label className="mb-1 block text-sm text-white/70">
+              <label htmlFor="register-brand" className="mb-1 block text-sm text-white/70">
                 ブランド名 / サービス名
               </label>
               <input
+                id="register-brand"
                 type="text"
+                autoComplete="organization"
                 className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 transition-all duration-200 focus:border-cyan-400/50 focus:outline-none"
                 placeholder="例: MyBrand"
               />
             </div>
             <div>
-              <label className="mb-1 block text-sm text-white/70">
+              <label htmlFor="register-email" className="mb-1 block text-sm text-white/70">
                 メールアドレス
               </label>
               <input
+                id="register-email"
                 type="email"
+                autoComplete="email"
                 className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 transition-all duration-200 focus:border-cyan-400/50 focus:outline-none"
                 placeholder="email@example.com"
               />
             </div>
             <div>
-              <label className="mb-1 block text-sm text-white/70">
+              <label htmlFor="register-password" className="mb-1 block text-sm text-white/70">
                 パスワード
               </label>
               <input
+                id="register-password"
                 type="password"
+                autoComplete="new-password"
                 className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 transition-all duration-200 focus:border-cyan-400/50 focus:outline-none"
                 placeholder="8文字以上"
               />

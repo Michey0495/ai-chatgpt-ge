@@ -46,8 +46,9 @@ export function ScanForm({ onScanComplete }: ScanFormProps) {
       <h3 className="mb-4 text-lg font-semibold text-white">新規スキャン</h3>
       <form onSubmit={handleScan} className="flex flex-col gap-4 sm:flex-row sm:items-end">
         <div className="flex-1">
-          <label className="mb-1 block text-sm text-white/50">キーワード</label>
+          <label htmlFor="scan-keyword" className="mb-1 block text-sm text-white/50">キーワード</label>
           <input
+            id="scan-keyword"
             type="text"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
@@ -57,8 +58,9 @@ export function ScanForm({ onScanComplete }: ScanFormProps) {
           />
         </div>
         <div className="sm:w-48">
-          <label className="mb-1 block text-sm text-white/50">ブランド名</label>
+          <label htmlFor="scan-brand" className="mb-1 block text-sm text-white/50">ブランド名</label>
           <input
+            id="scan-brand"
             type="text"
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
@@ -76,7 +78,7 @@ export function ScanForm({ onScanComplete }: ScanFormProps) {
         </button>
       </form>
       {error && (
-        <p className="mt-3 text-sm text-red-400">{error}</p>
+        <p role="alert" className="mt-3 text-sm text-red-400">{error}</p>
       )}
     </div>
   );

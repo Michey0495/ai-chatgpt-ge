@@ -32,7 +32,7 @@ export function KeywordTable({ keywords }: KeywordTableProps) {
             {keywords.map((kw) => (
               <tr
                 key={kw.id}
-                className="cursor-pointer border-b border-white/5 transition-all duration-200 hover:bg-white/5"
+                className="border-b border-white/5 transition-all duration-200 hover:bg-white/5"
               >
                 <td className="py-3 text-sm text-white">{kw.keyword}</td>
                 <td className="py-3 text-right text-sm font-medium text-white">
