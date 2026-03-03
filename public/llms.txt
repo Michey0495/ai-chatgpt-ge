@@ -1,0 +1,35 @@
+# GEO Radar
+> AI検索エンジンでのブランド可視性モニタリングツール
+
+## 概要
+GEO Radarは、ChatGPT、Gemini、Perplexity、Claudeの4大AI検索エンジンでブランドがどのように言及・引用されているかを監視・分析するダッシュボードです。
+
+## 主な機能
+- マルチモデル可視性スコアリング（0-100）
+- AI回答内のブランド言及検出
+- キーワード別のAI回答プレビュー
+- トレンド分析（週次・月次）
+- キーワード管理
+
+## API
+- MCP Server: /api/mcp (GET: ツール一覧, POST: ツール実行)
+- スキャンAPI: /api/scan (POST: キーワードスキャン実行)
+- 結果API: /api/results (GET: スキャン結果一覧)
+
+## MCPツール
+- geo_scan: 指定キーワードでAI検索エンジンのブランド可視性をスキャン
+- geo_report: ブランドの可視性レポートを生成
+- geo_keywords: 監視中のキーワード一覧を取得
+
+## ページ
+- /: ランディングページ
+- /dashboard: メインダッシュボード
+- /dashboard/keywords: キーワード管理
+- /login: ログイン
+- /register: 新規登録
+
+## 技術スタック
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS
+- Vercel
