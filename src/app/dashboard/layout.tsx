@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
-  { href: "/dashboard", label: "概要" },
-  { href: "/dashboard/keywords", label: "キーワード" },
+  { href: "/dashboard", label: "概要", exact: true },
+  { href: "/dashboard/keywords", label: "キーワード", exact: false },
 ];
 
 export default function DashboardLayout({
@@ -10,6 +13,8 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
   return (
     <div className="min-h-screen bg-black">
       <header className="border-b border-white/10">
@@ -22,15 +27,24 @@ export default function DashboardLayout({
               GEO<span className="text-cyan-400"> Radar</span>
             </Link>
             <nav className="flex items-center gap-1">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-lg px-3 py-1.5 text-sm text-white/60 transition-all duration-200 hover:bg-white/5 hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const isActive = item.exact
+                  ? pathname === item.href
+                  : pathname.startsWith(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`rounded-lg px-3 py-1.5 text-sm transition-all duration-200 ${
+                      isActive
+                        ? "bg-white/10 text-white"
+                        : "text-white/60 hover:bg-white/5 hover:text-white"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </nav>
           </div>
           <div className="flex items-center gap-4">

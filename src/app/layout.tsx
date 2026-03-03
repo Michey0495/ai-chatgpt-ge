@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@/components/google-analytics";
+import { StructuredData } from "@/components/structured-data";
+import { FeedbackWidget } from "@/components/feedback-widget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +25,10 @@ export const metadata: Metadata = {
     "ChatGPT SEO",
     "AI検索エンジン 最適化",
     "Generative Engine Optimization",
+    "ブランド可視性",
+    "AI検索モニタリング",
   ],
+  metadataBase: new URL("https://geo-radar.ezoai.jp"),
   openGraph: {
     title: "GEO Radar - AI検索エンジン可視性モニタリング",
     description:
@@ -42,6 +48,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: "https://geo-radar.ezoai.jp",
+  },
 };
 
 export default function RootLayout({
@@ -51,10 +60,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         {children}
+        <FeedbackWidget repoName="ai-chatgpt-ge" />
+        <GoogleAnalytics />
       </body>
     </html>
   );
